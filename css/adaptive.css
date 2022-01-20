@@ -7,8 +7,8 @@
 
 @media screen and (max-width:1023px) {
 
-    html {min-width:320px; height:auto !important}
-    body {min-width:320px; height:auto !important; font-size:16px; line-height:1.5em}
+    html {min-width:480px; height:auto !important}
+    body {min-width:480px; height:auto !important; font-size:16px; line-height:1.5em}
 
     .page_margins {width:auto; min-height:0}
     .page {padding-bottom:0}
