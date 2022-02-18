@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    $('#header').append('<a href="#" class="mobile-menu-link"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34 34"><path d="M4.25 18.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 8.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M4.25 28.5H29.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23"><path d="M2.98438 2.48438L21.0156 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M21.0156 2.48438L2.9844 20.5156" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg></a>');
     $('#nav_trailers').before('<a href="#" class="nav_trailers-link">Каталог</a>');
 
     $('.mobile-menu-link').click(function(e) {
@@ -16,7 +15,7 @@ $(document).ready(function() {
         }
         e.preventDefault();
     });
-    
+
     if ($('h1').text() == 'Сравнение прицепов') {
         $('#col3_content table').wrapAll('<div class="compare-table"></div>');
     }
@@ -28,7 +27,7 @@ $(document).ready(function() {
     if ($('#YMapsID').length == 1) {
         $('#header').parent().addClass('header-dealers-adaptive');
     }
-    
+
     $('#pcard_desc').each(function() {
         $('#pcard_desc').append('<div id="pcard_params" class="page_wrapper ie_floatexpand pcard_params_mobile">' + $('#pcard_params').html() + '</div>');
     });
@@ -39,10 +38,15 @@ $(document).ready(function() {
         $('html, body').animate({'scrollTop': 0});
         e.preventDefault();
     });
-    
+
     $('.nav_trailers-link').click(function(e) {
         $('html').toggleClass('mobile-submenu-open');
         e.preventDefault();
+    });
+
+    $('#cat_listing .item:not(.extra_equip)').each(function() {
+        var curItem = $(this);
+        curItem.prepend('<div class="cat_listing-title-mobile"><a href="' + curItem.find('.title').attr('href') + '">' + curItem.find('.title').html() + '</a></div>');
     });
 
 });
@@ -52,6 +56,12 @@ $(window).on('load resize scroll', function() {
     $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
     var windowHeight = $('#body-test-height').height();
     $('#body-test-height').remove();
+
+    if (windowScroll > 0) {
+        $('#header').addClass('fixed');
+    } else {
+        $('#header').removeClass('fixed');
+    }
 
     if ($('.up-link').length == 1) {
         if (windowScroll > windowHeight) {

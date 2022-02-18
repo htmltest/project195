@@ -5,6 +5,15 @@
 .up-link {display:none}
 #contact_header a {text-decoration:none; color:inherit}
 
+#cat_listing .cat_listing-title-mobile {display:none}
+
+.cat_listing-params {display:none}
+
+#contact_footer .subcolumns .c50r br {display:none}
+.header-cart {display:none}
+
+.novelty-mobile {display:none}
+
 @media screen and (max-width:1023px) {
 
     html {min-width:480px; height:auto !important}
@@ -32,25 +41,30 @@
     #search_login {display:none}
     #search_login.main_search_login {display:none}
 
-    #header {height:80px; padding:0; border-bottom:1px solid #000}
-    #header #logo {left:20px; top:30px; width:auto; height:auto}
-    #header #logo img {width:150px}
+    .page_margins {padding-top:75px}
+    #header {height:75px; padding:0; border-bottom:1px solid #000; position:fixed; left:0; top:0; right:0; z-index:101; background:#fff}
+    #header.fixed {border-bottom-color:#fff; box-shadow:0 10px 15px rgba(0, 0, 0, 0.1)}
+    #header #logo {left:20px; top:27px; width:auto; height:auto}
+    #header #logo img {width:157px}
 
     dl#contact_header {display:none}
     ul#nav_main {display:none}
     ul#nav_trailers {display:none}
     .yt_block {display:none}
 
-    .mobile-menu-link {display:block; position:absolute; right:0; top:0; height:79px; width:74px}
+    .mobile-menu-link {display:block; position:absolute; right:0; top:0; height:74px; width:74px}
     .mobile-menu-link svg:nth-child(1) {display:block; fill:none; stroke:#000; width:34px; height:34px; position:absolute; left:50%; top:50%; margin:-17px 0 0 -17px}
     .mobile-menu-link svg:nth-child(2) {display:none}
     .mobile-menu-open .mobile-menu-link svg:nth-child(1) {display:none}
     .mobile-menu-open .mobile-menu-link svg:nth-child(2) {display:block; fill:none; stroke:#000; width:24px; height:23px; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px}
 
+    #header a.header-cart {display:block; position:absolute; right:77px; top:24px; width:26px; height:27px; background:url(../images/header-cart.svg); text-decoration:none; color:#fff}
+    #header a.header-cart span {display:block; position:absolute; right:-10px; top:-6px; color:#fff; min-width:20px; box-sizing:border-box; text-align:center; height:20px; padding:0 3px; border-radius:10px; font-weight:bold; font-size:14px; line-height:20px; background:#ff7516}
+
     .mobile-menu-open,
     .mobile-menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
-    .mobile-menu-open #header {height:auto; position:fixed; left:0; top:0; right:0; bottom:0; background:#fff; border-bottom:none; z-index:199; overflow:auto; padding:80px 0 0 0; display:flex; flex-flow:wrap}
+    .mobile-menu-open #header {height:auto; position:fixed; left:0; top:0; right:0; bottom:0; background:#fff; border-bottom:none; z-index:199; overflow:auto; padding:75px 0 0 0; display:flex; flex-flow:wrap}
     .mobile-menu-open #header dl#contact_header {display:block; position:relative; left:auto; top:auto; right:auto; padding:20px 20px; order:3; border-top:1px solid #525763; margin:0; width:100%; box-sizing:border-box}
     .mobile-menu-open #header dl#contact_header dt {margin-top:20px}
     .mobile-menu-open #header dl#contact_header dt:first-child {margin-top:0}
@@ -85,7 +99,7 @@
     .main-aside ul li {background:none; position:relative}
     .main-aside ul li::before {content:""; display:block; position:absolute; left:0; top:12px; width:4px; height:4px; border-radius:50%; background:#25282f; margin-top:-2px}
 
-    #col3_content {padding:30px 20px}
+    #col3_content {padding:30px 20px 80px 20px}
 
     table.main-list {display:block}
     table.main-list tbody {display:block}
@@ -102,24 +116,39 @@
     ul#nav_aux li {background:none; position:relative}
     ul#nav_aux li::before {content:""; display:block; position:absolute; left:4px; top:14px; width:4px; height:4px; border-radius:50%; background:#25282f; margin-top:-2px}
 
-    #cat_listing {overflow:visible}
-    #cat_listing .item {display:block; float:none; width:auto; margin:0 0 20px 0; overflow:visible}
+    #cat_listing {overflow:visible; border-bottom:1px solid #cdcdce}
+    #cat_listing .item {display:block; float:none; width:auto; margin:0; overflow:visible; border-top:1px solid #cdcdce; padding:25px 0}
     .zoom_photo_left_140x140, .zoom_photo_left_325x255, .zoom_photo_left_60x60 {position:relative; overflow:visible; margin:0 auto 50px auto; float:none}
     .zoom_photo_left_140x140 a, .zoom_photo_left_325x255 a, .zoom_photo_left_60x60 a {left:1px; top:1px; right:1px; bottom:1px; overflow:hidden; width:auto; height:auto}
-    .zoom_photo_left_140x140 a.list_compare, .zoom_photo_left_325x255 a.list_compare, .zoom_photo_left_60x60 a.list_compare {position:absolute; left:50%; top:auto; bottom:-28px; margin:0 0 0 -12px !important; overflow:visible; width:23px; height:22px; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; background:url(../images/compare.png) no-repeat center}
+    .zoom_photo_left_140x140 a.list_compare, .zoom_photo_left_325x255 a.list_compare, .zoom_photo_left_60x60 a.list_compare {position:absolute; left:0; top:0; bottom:auto; margin:0 !important; overflow:visible; width:19px; height:19px; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; background:url(../images/compare.svg) no-repeat center}
     .zoom_photo_left_140x140 img.photo {box-sizing:border-box}
     .zoom_photo_left_140x140 a img, .zoom_photo_left_325x255 a img, .zoom_photo_left_60x60 a img {border:none}
 
     #cat_listing .item::after {content:""; display:block; clear:both}
     #cat_listing .item .zoom_photo_left_140x140 {float:left; margin:0}
-    #cat_listing .item .desc {float:none; margin:0 0 0 160px}
 
-    #cat_listing .item .desc dl dt {width:auto; float:none; text-align:left}
-    #cat_listing .item .desc dl dd {margin:0; font-size:1.1em}
+    #cat_listing .cat_listing-title-mobile {display:block; font-weight:bold; font-size:18px; line-height:27px; margin:0 0 20px 0}
+    #cat_listing .cat_listing-title-mobile a {color:#222222}
+    #cat_listing .item .desc a.title {display:none}
+
+    #cat_listing .item .desc {float:left; width:100%; margin:3px 0 0 0}
+    #cat_listing .item .desc dl dt:nth-child(5) {display:none}
+    #cat_listing .item .desc dl dt {clear:left; float:left; width:auto; font-size:14px; line-height:21px; color:#999; font-weight:normal}
+    #cat_listing .item .desc dl dt::after {content:":"}
+    #cat_listing .item .desc dl dd {margin:0; float:left; font-size:14px; line-height:21px; color:#000; font-weight:normal}
     #cat_listing .item .desc dl dd.model a.detail_link {display:none}
-    #cat_listing .item .desc dl dd.price .order_link_new {display:block; position:relative; right:auto; top:auto}
-    #cat_listing .item .desc p {padding:20px; margin:0 -20px 0 -180px}
+    #cat_listing .item .desc dl dd.model sup {display:none}
+    #cat_listing .item .desc dl dd.price {float:right; font-weight:bold; font-size:22px; line-height:45px; color:#ff7516; margin-top:-24px}
+    #cat_listing .item .desc dl dd.price .order_link_new {position:relative; left:auto; right:auto; top:auto; bottom:auto; width:45px; height:45px; font-size:0; line-height:0; text-decoration:none; background:url(../images/buy.svg) no-repeat; display:inline-block; vertical-align:top}
+    #cat_listing .item .desc p {display:none}
     #cat_listing .item .desc a.title {font-size:1.1em}
+    .novelty-mobile {display:block; position:absolute; left:33px; top:0; background:#FF7516; color:#fff; white-space:nowrap; width:65px; height:18px; text-align:center; font-size:12px; line-height:18px; font-weight:bold; letter-spacing:0; border-radius:3px; z-index:1}
+
+    .zoom_photo_left_140x140 {float:left; width:210px; height:152px; line-height:152px; text-align:center}
+    .zoom_photo_left_140x140 img.photo {width:auto; height:auto; max-width:100%; max-height:100%; vertical-align:middle; position:relative}
+    .zoom_photo_left_140x140 img {border:none}
+    .zoom_photo_left_140x140 .mask {display:none}
+    .zoom_photo_left_140x140 a {left:0; top:0; right:0; bottom:0; border:none}
 
     .page_wrapper {width:auto}
     #prod_photos {float:none; width:auto}
@@ -129,6 +158,12 @@
     #prod_photos .zoom_photo_left_60x60 {display:inline-block; vertical-align:top}
     #prod_photos .zoom_photo_left_60x60 .photolink img {opacity:0}
     .zoom_photo_left_325x255 .mask {width:100%; height:100%; left:0; top:0}
+    .cat_listing-params {display:block; float:right; width:190px; clear:right; font-size:16px !important; line-height:30px; color:#000}
+    .cat_listing-param {position:relative; padding:0 0 0 30px}
+    .cat_listing-param-1 {background:url(../images/cat_listing-param-1.svg) no-repeat left center}
+    .cat_listing-param-2 {background:url(../images/cat_listing-param-1.svg) no-repeat left center}
+    .cat_listing-param-3 {background:url(../images/cat_listing-param-1.svg) no-repeat left center}
+    .cat_listing-param-4 {background:url(../images/cat_listing-param-1.svg) no-repeat left center}
 
     #pcard_params {width:auto !important; margin:30px 0 0 0; font-size:16px !important; line-height:24px !important}
     #cat_listing .extra_equip.renew {width:auto}
@@ -143,33 +178,42 @@
     dl#model_price {font-size:1.1em}
     dl#model_price dt {float:none; width:auto; text-align:left}
     #model_price+div {margin:20px 0 !important}
-    
+
     #nav_aux #order_form {font-size:16px !important; line-height:24px !important}
 
     #prod_photos #pcard_params {display:none}
     .pcard_params_mobile {display:block}
 
     #cat_listing .extra_equip.renew .desc.left .sku {position:relative; right:auto; top:auto}
-    #cat_listing .extra_equip.renew .desc.right {width:auto; margin:0 0 0 160px}
 
     #cat_listing .desc.left .text, #cat_listing .desc.left .text p {font-size:16px; line-height:24px}
     #cat_listing .item .zoom_photo_left_60x60 {float:left; margin:0}
-    #cat_listing .item .desc {float:none; margin:0 0 0 160px}
 
     #footer {margin:0; height:auto; width:auto}
-    #footer_content {width:auto; height:auto; padding:20px}
+    #footer_content {width:auto; height:auto; padding:34px 20px 48px 20px; text-align:center}
+    #footer_content::before {content:""; display:block; width:236px; height:34px; margin:0 auto; background:url(../images/footer-logo.svg) no-repeat}
 
-    #mzsa_name {display:block; position:relative; left:auto; top:auto}
+    #mzsa_name {display:block; position:relative; left:auto; top:auto; font-size:16px; line-height:24px; padding:20px 0 0 0; font-weight:bold}
 
-    #contact_footer {position:relative; left:auto; top:auto; width:auto; padding:20px 0 0 20px}
+    #contact_footer {position:relative; left:auto; top:auto; width:auto; padding:20px 0 0 0; font-size:16px; line-height:24px; font-weight:normal}
+    #contact_footer dt {font-weight:normal}
     #contact_footer .subcolumns .c50l {width:auto}
+    #contact_footer .subcolumns .c50l dd {margin:6px 0 0 0}
+    #contact_footer .subcolumns .c50l span {display:none}
+    #contact_footer .subcolumns .c50l a {display:inline-block; vertical-align:top; height:50px; padding:0 50px; font-size:20px; line-height:50px; font-weight:bold; color:#fff; text-decoration:none; background:#63666e; border-radius:5px}
     #contact_footer .subcolumns .c50r {width:auto; margin:20px 0 0 0}
-    #contact_footer .subcolumns .c50r dd+dd {margin:20px 0 0 0}
+    #contact_footer .subcolumns .c50r dd+dd+dd {margin:20px 0 0 0}
+    #contact_footer .subcolumns .c50r a {font-weight:normal; text-decoration:none}
+    #contact_footer .subcolumns .c50r br {display:block}
+    #contact_footer .subcolumns .c50r dd+dd+dd span {display:none}
+    #contact_footer .subcolumns .c50r dd+dd+dd a {color:#FF7516; text-decoration:underline}
     .subcr {padding:0}
 
-    #speciallink {position:relative; right:auto; top:auto; margin:20px 0 0 0}
+    #speciallink {position:relative; right:auto; top:auto; margin:40px 0 0 0; font-size:14px; line-height:21px}
+    #speciallink a {font-weight:normal}
 
-    #itmediapro {position:relative; right:auto; top:auto; margin:20px 0 0 0}
+    #itmediapro {position:relative; right:auto; top:auto; margin:20px 0 0 0; font-size:14px; line-height:21px}
+    #itmediapro a {font-weight:normal}
 
     .columnar .type-text label, .columnar .type-select label {float:none; width:auto}
     .columnar div.type-text input, .columnar div.type-text textarea {float:none; width:100%; box-sizing:border-box; font-size:16px; line-height:24px; padding:10px}
@@ -213,6 +257,4 @@
     a.up-link svg {display:block; position:absolute; left:50%; top:50%; margin:-12px 0 0 -12px; width:24px; height:24px; fill:none; stroke:#000; transition:stroke 0.2s}
     a.up-link {width:50px; height:50px}
     a.up-link svg {width:28px; height:28px; margin:-14px 0 0 -14px}
-
-    #cat_listing .item .desc {width:auto}
 }
