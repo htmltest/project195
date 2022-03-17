@@ -70,10 +70,12 @@ $(window).on('load resize scroll', function() {
             $('.up-link').removeClass('visible');
         }
 
-        if (windowScroll + windowHeight > $('#footer').offset().top) {
-            $('.up-link').css({'margin-bottom': (windowScroll + windowHeight) - $('#footer').offset().top});
-        } else {
-            $('.up-link').css({'margin-bottom': 0});
+        if ($('#footer').length == 1) {
+            if (windowScroll + windowHeight > $('#footer').offset().top) {
+                $('.up-link').css({'margin-bottom': (windowScroll + windowHeight) - $('#footer').offset().top});
+            } else {
+                $('.up-link').css({'margin-bottom': 0});
+            }
         }
     }
 });
