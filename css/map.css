@@ -1,0 +1,4 @@
+@media screen and (max-width:1023px) {
+    .form-results {left:40px; margin-left:0; top:220px}
+    .YMaps-slider {top:auto !important; bottom:5px !important}
+}
