@@ -14,6 +14,12 @@
 
 .novelty-mobile {display:none}
 
+#cat_listing {overflow:visible}
+#cat_listing .item {overflow:visible}
+#cat_listing .item::after {content:""; display:block; clear:both}
+
+sub, sup {font-size:80%}
+
 @media screen and (max-width:1023px) {
 
     html {min-width:480px; height:auto !important}
