@@ -6,12 +6,18 @@ $(document).ready(function() {
         if ($('html').hasClass('mobile-menu-open')) {
             $('html').removeClass('mobile-menu-open');
             $('.page_margins').css('margin-top', 0);
+            $('meta[name="viewport"]').attr('content', 'width=device-width');
             $(window).scrollTop($('html').data('scrollTop'));
         } else {
             var curScroll = $(window).scrollTop();
+            var curWidth = $(window).width();
+            if (curWidth < 480) {
+                curWidth = 480;
+            }
             $('html').addClass('mobile-menu-open');
             $('html').data('scrollTop', curScroll);
             $('.page_margins').css('margin-top', -curScroll);
+            $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
         }
         e.preventDefault();
     });
