@@ -35,6 +35,7 @@ $(window).on('load', function() {
 
         var pathDealers = 'ajax/dealers.php';
         var pathDealerItem = 'ajax/dealers-item.php';
+		//var pathDealerItem = '/dealers/dealers/';
         var pathCities = 'ajax/cities.php';
 
         $.ajax({
