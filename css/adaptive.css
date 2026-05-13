@@ -264,9 +264,9 @@ sub, sup {font-size:80%}
     .categories-item-title {font-size:18px; line-height:23px}
 }
 
-.ymaps3x0--marker:hover {z-index:1 !important}
-.ymaps3x0--marker:has(.new-map-city.open) {z-index:2 !important}
-.ymaps3x0--marker:has(.new-map-point.open) {z-index:2 !important}
+.ymaps3--marker:hover {z-index:1 !important}
+.ymaps3--marker:has(.new-map-city.open) {z-index:2 !important}
+.ymaps3--marker:has(.new-map-point.open) {z-index:2 !important}
 
 .new-map-city {width:0; height:0; position:relative}
 .new-map-city-icon {position:absolute; left:50%; bottom:-15px; width:52px; height:54px; transform:translate(-50%, 0); background:url(../images/new-map-marker-city.svg) no-repeat; cursor:pointer}
@@ -340,3 +340,6 @@ sub, sup {font-size:80%}
 @media screen and (min-width:1024px) {
     .dealers-contacts-item-copy:hover svg {fill:#000000}
 }
+
+#model_desc {line-height:1.5em}
+#model_desc p {text-indent:0}
