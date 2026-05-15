@@ -61,7 +61,7 @@ sub, sup {font-size:80%}
 	.mobile-menu-open,
 	.mobile-menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
-	.mobile-menu-open #header {height:auto; position:fixed; left:0; top:0; right:0; bottom:0; background:#fff; border-bottom:none; z-index:199; overflow:auto; padding:80px 0 0 0; display:flex; flex-flow:wrap}
+	.mobile-menu-open #header {height:auto; position:fixed; left:0; top:0; right:0; bottom:0; background:#fff; border-bottom:none; z-index:199; overflow:auto; padding:80px 0 0 0; display:flex; flex-flow:wrap; height:auto !important}
 	.mobile-menu-open #header dl#contact_header {display:block; position:relative; left:auto; top:auto; right:auto; padding:20px 20px; order:3; border-top:1px solid #525763; margin:0; width:100%; box-sizing:border-box}
 	.mobile-menu-open #header dl#contact_header dt {margin-top:20px}
 	.mobile-menu-open #header dl#contact_header dt:first-child {margin-top:0}
@@ -327,9 +327,9 @@ sub, sup {font-size:80%}
 .map-city-search-select-popup-list-item.hidden {display:none}
 
 @media screen and (max-width:1023px) {
-    .map-link-new {top:80px; right:0; margin:0; width:49%; left:auto; position:fixed; box-sizing:border-box; font-size:11px; line-height:1em; padding:7px 10px 8px 10px}
-    .mobile-menu-open .map-link {display:none}
-    .map-city-search {position:fixed; top:80px; left:0; margin-left:0; width:49%; z-index:100002}
+    .map-link-new {top:90px; right:0; margin:0; width:49%; left:auto; position:fixed; box-sizing:border-box; font-size:11px; line-height:1em; padding:0 10px; display:flex; min-height:36px; align-items:center; flex-direction:column; justify-content:center}
+    .mobile-menu-open .map-link-new {display:none}
+    .map-city-search {position:fixed; top:90px; left:0; margin-left:0; width:49%; z-index:100002}
     .mobile-menu-open .map-city-search {display:none}
     .map-city-search-select {width:100%}
     .mobile-menu-open #reformal_tab {display:none}
@@ -343,3 +343,9 @@ sub, sup {font-size:80%}
 
 #model_desc {line-height:1.5em}
 #model_desc p {text-indent:0}
+
+.header-dealers-adaptive #header {height:84px}
+
+@media screen and (max-width: 1023px) {
+    .header-dealers-adaptive #header {height:80px}
+}
